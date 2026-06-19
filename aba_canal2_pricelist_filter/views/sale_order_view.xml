@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_order_form_inherit_canal2_pricelist" model="ir.ui.view">
+        <field name="name">sale.order.form.canal2.pricelist</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="priority">100</field>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='pricelist_id']" position="before">
+                <field name="is_canal_2_type" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='pricelist_id']" position="attributes">
+                <attribute name="domain">[('name', 'ilike', 'Canal 2')] if is_canal_2_type else [('name', 'not ilike', 'Canal 2')]</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
