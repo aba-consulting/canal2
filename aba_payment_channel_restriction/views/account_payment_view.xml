@@ -1,0 +1,12 @@
+<odoo>
+    <record id="aba_view_account_payment_form_receiptbook_canal2" model="ir.ui.view">
+        <field name="name">account.payment.form.receiptbook.canal2</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account_payment_pro_receiptbook.view_account_payment_form"/>
+        <field name="arch" type="xml">
+            <field name="receiptbook_id" position="attributes">
+                <attribute name="domain">[('id', 'in', available_receiptbook_ids)]</attribute>
+            </field>
+        </field>
+    </record>
+</odoo>

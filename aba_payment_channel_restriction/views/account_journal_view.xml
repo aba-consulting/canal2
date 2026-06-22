@@ -1,0 +1,13 @@
+<odoo>
+    <record id="aba_view_account_journal_form_es_canal_2" model="ir.ui.view">
+        <field name="name">account.journal.form.es.canal.2</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.view_account_journal_form"/>
+        <field name="arch" type="xml">
+            <!-- Agregamos el flag Es canal 2 en la sección de información contable, debajo del código corto -->
+            <field name="code" position="after">
+                <field name="es_canal_2"/>
+            </field>
+        </field>
+    </record>
+</odoo>

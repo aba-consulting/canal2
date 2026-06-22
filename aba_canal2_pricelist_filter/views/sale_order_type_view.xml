@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_sale_order_type_form_inherit_canal2" model="ir.ui.view">
+        <field name="name">sale.order.type.form.canal2</field>
+        <field name="model">sale.order.type</field>
+        <field name="inherit_id" ref="sale_order_type.sot_sale_order_type_form_view"/>
+        <field name="arch" type="xml">
+            <field name="pricelist_id" position="after">
+                <field name="is_canal2"/>
+            </field>
+        </field>
+    </record>
+</odoo>
